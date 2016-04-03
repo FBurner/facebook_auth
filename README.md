@@ -1,2 +1,7 @@
 # basic_face_book_auth
-initial commit
+
+**DATABASE Scripts in:**
+
+resources/scripts/db/face_book_auth.sql
+
+
