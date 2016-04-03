@@ -10,9 +10,8 @@ class AuthController extends Controller {
     public function authAction() {
         $params = $this->getParams();
 
-        if(empty($params['code'])) {
+        if (empty($params['code'])) {
             throw new Exception('authorization code is not given', 1000);
-            exit;
         }
 
         $accessTokenUrl = $this->getConfig()['facebook']['access_token_retrieval'];
