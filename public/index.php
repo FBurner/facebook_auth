@@ -14,7 +14,12 @@ $autoLoader = new Autoloader();
 spl_autoload_register(array($autoLoader, 'loadController'));
 spl_autoload_register(array($autoLoader, 'loadModels'));
 
-$config = include(APPLICATION_PATH . DIRECTORY_SEPARATOR . 'configs' . DIRECTORY_SEPARATOR . 'config.php');
+$configPath = APPLICATION_PATH . DIRECTORY_SEPARATOR . 'configs' . DIRECTORY_SEPARATOR . 'config.php';
+if (!file_exists($configPath)) {
+    throw new Exception('config not found - create a config file according to "app/configs/config.example.php"');
+}
+
+$config = include($configPath);
 
 $config = array_merge($config['production'], $config[getenv('APPLICATION_ENV')]);
 

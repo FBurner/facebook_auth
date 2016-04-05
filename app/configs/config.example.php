@@ -8,8 +8,8 @@ return array(
         ),
         'basePath' => '/',
         'facebook' => array(
-            'app_id' => '698822996887673',
-            'app_secret' => 'bb5fa65d38bd277eb62c908f27eb206c',
+            'app_id' => 'appid',
+            'app_secret' => 'appsecret',
             'access_token_retrieval' => 'https://graph.facebook.com/v2.3/oauth/access_token',
             'auth_retrieval' => 'https://www.facebook.com/dialog/oauth',
         ),

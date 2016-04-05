@@ -1,6 +1,7 @@
 <?php
 
 class FrontController extends Controller {
+    //** @todo refactor to singleton */
     const DEFAULT_CONTROLLER = 'IndexController';
     const DEFAULT_ACTION     = 'indexAction';
 
